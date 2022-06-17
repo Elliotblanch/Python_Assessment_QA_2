@@ -31,8 +31,13 @@ import random
 # How does a for loop iterate through a string?
 
 
-def one(string):
-    return
+def one(x):
+    list = [char * 3 for char in x]
+    output =''
+    for y in list:
+        output += ''+ y
+    return output
+
 
     # <QUESTION 2>
 
@@ -51,7 +56,11 @@ def one(string):
 
 
 def two(num):
-    return
+    for m in range(2, num):
+        if (num % m) == 0:
+            return False
+    else:
+        return True
 
     # <QUESTION 3>
 
@@ -69,7 +78,8 @@ def two(num):
 
 
 def three(a):
-    return
+    output = a + (a * 11) + (a * 111) + (a * 1111)
+    return output
 
     # <QUESTION 4>
 
@@ -117,7 +127,10 @@ def four(string1, string2):
 
 
 def five():
-    return
+    output = []
+    for t in range(5):
+        output.append(random.randrange(100, 200, 2))
+    return output
 
     # <QUESTION 6>
 
@@ -137,7 +150,13 @@ def five():
 
 
 def six(string):
-    return
+    list = [char for char in string.lower()]
+  
+    if list[-1] == 'y':
+        if list[-2] == 'p':
+            return True
+    else:
+        return False
 
     # <QUESTION 7>
 
@@ -162,7 +181,12 @@ def six(string):
 
 
 def seven(a, b, c):
-    return
+    list = [a, b, c]
+    list.sort()
+    if (list[1] - list[0]) == (list[2] - list[1]):
+        return True
+    else:
+        return False
 
     # <QUESTION 8>
 
@@ -181,7 +205,9 @@ def seven(a, b, c):
 
 
 def eight(string, num):
-    return
+    x = (len(string) + 1)//2
+    string.replace(string[x],'',num)
+    return string 
 
     # <QUESTION 9>
 
@@ -200,6 +226,8 @@ def eight(string, num):
 
 def nine(string1, string2):
     # make sure string1 is the shortest of the two
+    list = [string1, string2]
+    list.sort()
     return
 
     # <QUESTION 10>
